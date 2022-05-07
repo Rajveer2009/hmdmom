@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mothers Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="mse.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@300&family=Oleo+Script+Swash+Caps:wght@700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <div id="head-div">
+        <h1>HAPPY MOTHERS DAY TO THE SWEETEST MOM IN THE WORLD</h1>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="count-down-div">
+        <p id="quote1">TIME UNTIL THE BEST MOTHERS BIRTHDAY</p>
+        <p id="demo"></p>
+        <script>
+            var countDownDate = new Date("Mar 5, 2023  13:15:13").getTime();
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = days + " D   " + hours + " H   "
+                    + minutes + " M   " + seconds + " S   ";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="quote-div">
+        <h2 id="quote">QOUTES</h2>
+        <br>
+        <p class="quote">~ "YOU GAVE ME THE BEST GIFT IN LIFE BIRTH"</p>
+        <br>
+        <p class="quote">~ "A MOTHER IS YOUR FIRST FRIEND, YOUR BEST FRIEND, YOUR FOREVER FRIEND"</p>
+        <br>
+        <p class="quote">~ "WHEN YOU ARE LOOKING AT YOUR MOTHER, YOU ARE LOOKING AT THE PUREST LOVE YOU WILL EVER KNOW"
+        </p>
+        <br>
+        <br>
+    </div>
+
+    <div id="img-div">
+        <h2 id="img-p">MEMORIES</h2>
+        <br>
+        <img width="495" src="pic1.jpg">
+        <img width="495" src="pic2.jpg">
+        <img width="495" src="pic3.jpg">
+    </div>
+</body>
+
+</html>
